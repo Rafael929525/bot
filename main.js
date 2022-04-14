@@ -23,7 +23,7 @@ global.timestamp = {
 const PORT = process.env.PORT || 3000
 global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
 
-global.prefix = new RegExp('^[' + (opts['prefix'] || '‎xzXZ/i!#$%+£¢€¥^°🐤=¶∆×÷π√✓©®:;?&.\\-').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
+global.prefix = new RegExp('^[' + (opts['prefix'] || '‎NnxzXZ😎/i!#$%+£¢€¥^°🐤=¶∆×÷π√✓©®:;?&.\\-').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
 
 global.DATABASE = new (require('./lib/database'))(`${opts._[0] ? opts._[0] + '_' : ''}database.json`, null, 2)
 if (!global.DATABASE.data.users) global.DATABASE.data = {
@@ -45,11 +45,11 @@ if (opts['debug']) conn.logger.level = 'debug'
 if (opts['big-qr'] || opts['server']) conn.on('qr', qr => generate(qr, { small: false }))
 let lastJSON = JSON.stringify(global.DATABASE.data)
 if (!opts['test']) setInterval(() => {
-  conn.logger.info('Saving database . . .')
-  if (JSON.stringify(global.DATABASE.data) == lastJSON) conn.logger.info('Database is up to date')
+  conn.logger.info('[❗] Scan Qrnya Waktu Cuma 20 Detik ! !')
+  if (JSON.stringify(global.DATABASE.data) == lastJSON) conn.logger.info('Subscribe BotolBotZ')
   else {
     global.DATABASE.save()
-    conn.logger.info('Done saving database!')
+    conn.logger.info('Sukses Menyimpan Database!')
     lastJSON = JSON.stringify(global.DATABASE.data)
   }
 }, 60 * 1000) // Save every minute
@@ -104,7 +104,7 @@ if (opts['test']) {
     process.send(line.trim())
   })
   conn.connect().then(() => {
- conn.sendMessage('62895320853387@c.us', 'Bot Telah Tersambung Ke Database Nathan ღ Clara', 'conversation');
+ conn.sendMessage('62895320853387@c.us', 'Bot Telah Tersambung Ke Database BotolBotZ', 'conversation');
     fs.writeFileSync(authFile, JSON.stringify(conn.base64EncodedAuthInfo(), null, '\t'))
     global.timestamp.connect = new Date
   })
@@ -121,10 +121,10 @@ global.reloadHandler = function () {
     conn.off('group-participants-update', conn.onParticipantsUpdate)
     conn.off('CB:action,,call', conn.onCall)
   }
-  conn.welcome = 'Hai @user\n◪ Welcome in group:\n├─ @subject\n├─ Intro dulu\n├─ ❏ Nama: \n├─ ❏ Umur: \n├─ ❏ Asal kota: \n├─ ❏ Kelas: \n├─ ❏ Jenis kelamin: \nFOLLOW AKUN OWNER\n➣-\n➣https://youtube.com/channel/BotolBotz'
-  conn.bye = 'Selamat Tinggal @user!\nTerimakasih Telah Bergabung Di Grup\n\nKalo Balik Jangan Lupa Bawa Gorengan Buat Anggota Disini'
-  conn.spromote = '@user Sekarang Admin!'
-  conn.sdemote = '@user Sekarang Bukan Admin!'
+  conn.welcome = 'Hai @user\n Selamat Datang Di Grup:\n@subject\n\nIntro dulu\nNama: \nUmur: \nAsal kota: \nKelas: \nJenis kelamin: \n\nJangan Lupa Donasi : https://saweria.co/botoltzy'
+  conn.bye = 'Selamat Tinggal @user!\nTerimakasih Telah Bergabung Di Grup\n\nKalo Balik Jangan Lupa Bawa Gorengan Buat Anggota Disini\nDonasi : https://saweria.co/botoltzy'
+  conn.spromote = 'Waduh @user Sekarang Admin'
+  conn.sdemote = 'Alhamdulillah @user Sekarang Bukan Admin:v'
   conn.handler = handler.handler
   conn.onDelete = handler.delete
   conn.onParticipantsUpdate = handler.participantsUpdate

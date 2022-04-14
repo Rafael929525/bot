@@ -10,7 +10,7 @@ gay = `sayang`
 
   if (!m.quoted) throw `Tag Fotonya ` + gay // org gay
 
-    await m.reply(`*[❗] Wait,Sedang Dalam Proses...*`)
+    await m.reply(`*[❗] TES*`)
   let q = m.quoted ? m.quoted : m
   let media = await q.download()
   let img = await uploadImage(media)
@@ -22,7 +22,7 @@ gay = `sayang`
 
 } catch (e) {
 
- err = await (await fetch('https://raw.githubusercontent.com/herokuapp-com/kuhong-api/main/info/erorr.json')).json() // jika Erorr
+ err = await (await fetch('')).json() // jika Erorr
    throw err
   }
 }

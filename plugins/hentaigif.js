@@ -2,7 +2,7 @@ let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
    response = args.join(' ')
   if (!args) throw 'Masukkan Parameter'
-  m.reply('Sedang Diproses...')
+  m.reply(`_*「  WAITING  」* Perintah Kak ${conn.getName(m.sender)} Sedang Di Proses_`)
   let res = `https://raku-web.herokuapp.com/api/nsfw/hentaigif?apikey=RakuKeyTod`
   conn.sendFile(m.chat, res, 'hentai.gif', `wangy wangy wangy`, m, false)
 }

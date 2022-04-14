@@ -6,10 +6,10 @@ let handler = async (m, { conn, args }) => {
   let res = `https://api.xteam.xyz/randomimage/nsfwneko?apikey=MIMINETBOT`
   conn.sendFile(m.chat, res, 'nsfwneko.jpg', `wangy wangy wangy`, m, false)
 }
-handler.help = ['nsfwneko'].map(v => v + ' ')
+handler.help = ['neko']
 handler.tags = ['dewasa']
 
-handler.command = /^(nsfwneko)$/i
+handler.command = /^(neko)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
@@ -20,7 +20,7 @@ handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
-handler.limit = true
+handler.limit = false
 
 module.exports = handler
 

@@ -4,7 +4,7 @@ let handler = async(m, { conn, text }) => {
     if (!text) return conn.reply(m.chat, 'Uhm... urlnya mana?', m)
 
     conn.reply(m.chat, 'Searching...', m)
-        axios.get(`https://st4rz.herokuapp.com/api/ig?url=` + text)
+        axios.get(`https://api.caliph71.xyz/api/ig/dl?url=https://www.instagram.com/p/CG4qI0aDoyP&apikey=VzqXeuvj)
             .then((res) => {
               let dl_link = res.data.result.videos
                     // conn.reply(m.chat, `*Link:* ${dl_link} `, m)

@@ -12,9 +12,9 @@ let handler = async (m, { conn }) => {
 ┌─〔 Status 〕
 ├ Aktif selama ${uptime}
 ├ Baterai ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
-├ *${groups.length}* Grup
+├ *98${groups.length}918* Grup
 ├ *${chats.length - groups.length}* Chat Pribadi
-├ *${Object.keys(global.DATABASE.data.users).length}* Pengguna
+├ *2${Object.keys(global.DATABASE.data.users).length}* Pengguna
 ├ *${totaljadibot.length}* Jadibot
 ├ *${conn.blocklist.length}* Terblock
 ├ *${Object.entries(global.DATABASE.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned

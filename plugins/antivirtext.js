@@ -12,7 +12,7 @@ let handler = async function(m, { conn , args, text, isAdmin, isBotAdmin, groupM
     await conn.reply(m.chat, `
 *[ CHAT ANTI VIRTEX ]*
 _Terdeteksi *@${asu.split("@")[0]}* telah mengirim virtex!_
-Maaf Kamu akan dikick oleh *ZEROBOT*
+Maaf Kamu akan dikick oleh *BOTOLBOTZ*
 `.trim(), m, { 
       contextInfo: {  
         mentionedJid: [asu]
@@ -21,11 +21,11 @@ Maaf Kamu akan dikick oleh *ZEROBOT*
  if (isBotAdmin) {
    conn.groupRemove(m.chat, [asu])
      } else { 
-     	m.reply('```JADIKAN ZEROBOT SEBAGAI ADMIN !!!```')
+     	m.reply('```JADIKAN BOTOLBOTZ SEBAGAI ADMIN !!!```')
     }
   } conn.sendMessage(vir + '@s.whatsapp.net', `${m.text}`, MessageType.text)
 }
-handler.customPrefix = //i
+handler.customPrefix = /🍲🍲/i
 handler.command = new RegExp
 
 handler.fail = null

@@ -3,10 +3,10 @@ const fetch = require('node-fetch')
 
 let handler = async (m, { conn }) => {
     try {
-        let res = await fetch(global.API('xteam', '/randomimage/wpmobile', {}, 'APIKEY'))
+        let res = `https://caliph71.xyz/api/randomwp?apikey=VzqXeuvj`
         let img = await res.buffer()
         conn.sendMessage(m.chat, img, MessageType.image, {
-            quoted: m, caption: '*©BakaBOTZ*'
+            quoted: m, caption: '*© BotolBotZ*'
         })
     } catch (e) {
         console.log(e)

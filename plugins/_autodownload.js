@@ -100,7 +100,7 @@ handler.all = async function (m, { isPrems, isOwner }) {
 *Ukuran File Audio:* ${filesizeF}
 *Ukuran File Video:* ${filesize}
           `.trim(),
-            thumb, 'ZEROBOT', 'AUDIO', `.yta ${vid.url}`, 'VIDEO', `.yt ${vid.url}`)
+            thumb, 'botolbotz', 'AUDIO', `.yta ${vid.url}`, 'VIDEO', `.yt ${vid.url}`)
     }
 
 }

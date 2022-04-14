@@ -1,5 +1,15 @@
-let handler  = async (m, { conn, usedPrefix: _p }) => {
-let info = `
+let { MessageType } = require('@adiwajshing/baileys')
+let fetch = require('node-fetch')
+function clockString(ms) {
+  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+  let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+  let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+  return [h, m, s].map(v => v.toString().padStart(2, 0) ).join(':')
+}
+let handler  = async (m, { conn, text }) => {
+	let nani = 'https://telegra.ph/file/2a23f29a8bc87b2eafde8.jpg' 
+  let chats = conn.chats.all().filter(v => !v.read_only && v.message && !v.archive).map(v => v.jid)
+  let content = conn.send2ButtonLoc(m.chat, await (await fetch(nani)).buffer(), `
 ╭─「 BUY PREMIUM 」
 │ 
 │ > Keuntungan :
@@ -16,24 +26,14 @@ let info = `
 │• 50K / VIP (Permanen)
 │
 │ > Pembayaran :
-│• XL : 6287834993722
-│• AXIS : 6283144570377
-╰────
-`.trim()
-
-conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '*BOT TERVERIFIKASI*', 'status@broadcast')
-} 
-handler.help = ['premium']
-handler.tags = ['info']
+│• TRI : 62895320853387
+│• SAWERIA : saweria.co/botoltzy
+╰────`, ` -NabilXMS` , 'SEWABOT', '.hmpo', `OWNER`, `.owner`, m)
+  for (let id of chats) conn.copyNForward(id, content, true)
+}
 handler.command = /^(premium)$/i
 
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
-
-handler.fail = null
-handler.exp = 100
-
 module.exports = handler
+
+const more = String.fromCharCode(8206)
+const readMore = more.repeat(4001)

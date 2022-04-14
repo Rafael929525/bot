@@ -2,9 +2,9 @@ const fetch = require('node-fetch')
 const { MessageType } = require('@adiwajshing/baileys')
 const { sticker } = require('../lib/sticker')
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-    if (!text) throw `contoh:\n${usedPrefix + command} ariffb|${conn.getName(m.sender)}`
+    if (!text) throw `contoh:\n${usedPrefix + command} namakamu|namadia`
     let [nama1, nama2] = text.split(/[&|.]/i)
-    if (!nama1 || !nama2) throw `contoh:\n${usedPrefix + command} ariffb|${conn.getName(m.sender)}`
+    if (!nama1 || !nama2) throw `contoh:\n${usedPrefix + command} namakamu|namadia`
 
     let res = await fetch(global.API('zeks', '/api/primbonjodoh', { nama1, nama2 }, 'apikey'))
     if (res.status != 200) throw await `${res.status} ${res.statusText}`
@@ -23,7 +23,7 @@ ${positif}
 *Negatif:*
 ${negatif}
 
-*© AriaBotz*
+*© BotolBotZ*
 `.trim())
     }
     else throw json

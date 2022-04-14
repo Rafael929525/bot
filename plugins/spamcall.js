@@ -3,7 +3,7 @@ let handler = async(m, { conn, text }) => {
 
     if (!text) return conn.reply(m.chat, 'Silahkan masukan Nomor Telpon untuk di SpamCall!\n\nMisal : !spamcall 1234567890', m)
 
-	axios.get(`https://tobz-api.herokuapp.com/api/spamcall?no=${text}&apikey=BotWeA`).then ((res) => {
+	axios.get(`https://api.clph.me/api/spamcall?no=8956227290699&apikey=LfwXDPM3`).then ((res) => {
 	 	let hasil = `${res.data.logs}`
 
     conn.reply(m.chat, hasil, m)

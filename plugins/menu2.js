@@ -248,7 +248,7 @@ ${petik}Im ${conn.getName(conn.user.jid)} And You Use Prefix %p${petik}
 ❏ Total Features : ${petik} 1000+ ${petik} 
 
 ❏ ${petik} Join Here ${petik} 
-❏ ${petik} https://bit.ly/2VUSJIC ${petik} 
+❏ ${petik} - ${petik} 
 
 ❏ Ｉｎｆｏ Ｕｓｅｒ
 ❏ UserName : ${petik} %name ${petik} 

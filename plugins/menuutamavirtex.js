@@ -1,7 +1,7 @@
 let handler = async (m, { conn }) =>
 conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
                     "listMessage":  {
-                        "title": "*Silahkan Klik Menu Dibawah*",
+                        "title": "*Silahkan Klik Menu Virtex Dibawah*",
                         "description": "© BotolBotZ",
                         "buttonText": "PILIH VIRTEX",
                         "listType": "SINGLE_SELECT",
@@ -17,6 +17,9 @@ conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
                                     },{
                                         "title": "VIRTEX 3",
                                         "rowId": ".virtex3"
+                                    },{
+                                    	"title": "SUBSCRIBE YT : BotolBotZ",
+                                        "rowId": ".menu3"
                                     }
                                 ]
                             }
@@ -29,4 +32,5 @@ conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
 
 handler.command = ['virtex']
 handler.register = true
+handler.premium = true
 module.exports = handler

@@ -3,7 +3,7 @@ handler.before = async function (m) {
   let id = m.chat
   if (!m.quoted || !m.quoted.fromMe || !m.quoted.isBaileys || !/Ketik.*hint caklontong/i.test(m.quoted.text)) return
   conn.caklontong = conn.caklontong ? conn.caklontong : {}
-  if (!(id in conn.caklontong)) throw 'Soal itu telah berakhir!'
+  if (!(id in conn.caklontong)) throw 'Soal itu telah berakhir!'  
   if (m.quoted.id == conn.caklontong[id][0].id) {
     let json = JSON.parse(JSON.stringify(conn.caklontong[id][1]))
     // m.reply(JSON.stringify(json, null, '\t'))

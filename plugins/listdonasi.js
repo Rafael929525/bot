@@ -4,7 +4,7 @@ let fetch = require('node-fetch')
 let handler = async(m, { conn }) => {
 
  let thumb = await getBuffer(`http://docs-jojo.herokuapp.com/api/ssweb_full?url=https://tinyurl.com/29nt58wf&device=phone`)
- let caption = 'Nihh, Orang Yang Baik Ke Zero, Enggak Kek Kamu, Pake Doang Kaga Donasi'
+ let caption = 'Nihh, Orang Yang Baik Ke Botol, Enggak Kek Kamu, Pake Doang Kaga Donasi'
 
   conn.sendFile(m.chat, thumb, 'gambar.jpg', caption, m)
 }

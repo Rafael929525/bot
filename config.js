@@ -1,9 +1,9 @@
 global.DeveloperMode = 'false' //true Or false
 global.linkGC = ['https://bit.ly/36cLg9x']
 global.channelYT = ['https://bit.ly/3hg3bm4'] 
-global.owner = ['62895320853387', '380944480179', '6282269595175', '628978319619']// Put your number here
-global.mods = ['62895320853387', '380944480179', '6282269595175', '628978319619'] // Want some help?
-global.partner = ['628978319619'] // Want some help?
+global.owner = ['6289675970738']// Put your number here
+global.mods = [] // Want some help?
+global.partner = ['6281258699903', '0'] // Want some help?
 global.prems = [] // Premium user has unlimited limit
 global.APIs = { // API Prefix
   // name: 'https://website'
@@ -34,8 +34,8 @@ global.APIKeys = { // APIKey Here
 }
 
 // Sticker WM
-global.packname = 'Raku Gans'
-global.author = 'BakaBOTZ Is The Best'
+global.packname = 'Rafael Pack'
+global.author = 'Created by Rafael'
 
 global.multiplier = 69 // The higher, The harder levelup
 

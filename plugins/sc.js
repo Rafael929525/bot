@@ -17,12 +17,12 @@ let handler  = async (m, { conn, args }) => {
 
                     thumbnailUrl: await conn.getProfilePicture(conn.user.jid),
 
-                    mediaUrl: 'https://youtube.com/c/ZEROBOT7'
+                    mediaUrl: 'https://youtube.com/c/'
 
                 }
 
 }})
-handler.command = ['sc', 'script']
+handler.command = 
 handler.owner = false
 handler.mods = false
 handler.premium = false

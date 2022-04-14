@@ -1,12 +1,12 @@
 let handler  = async (m, { conn, text }) => {
   let chats = conn.chats.all().filter(v => !v.read_only && v.message && !v.archive).map(v => v.jid)
-  let content = await conn.cMod(m.chat, m, /bc|broadcast/i.test(text) ? text : text)
-  for (let id of chats) conn.copyNForward(id, content, true)
-  conn.reply(m.chat, `_Mengirim pesan broadcast ke ${chats.length} chat_`, m)
+  let content = await conn.cMod(m.chat, m, /bc|broadcast/i.test(text) ? text : text + '\n\n「 *BROADCAST* 」')
+  for (let id of chats) conn.copyNForward(id, content, false)
+  conn.reply(m.chat, `_Mengirim pesan broadcast ke 98${chats.length}918 chat_`, m)
 }
-handler.help = ['broadcastnowm','bcnowm'].map(v => v + ' <teks>')
+handler.help = ['broadcast','bc'].map(v => v + ' <teks>')
 handler.tags = ['owner']
-handler.command = /^(broadcastnowm|bcnowm)$/i
+handler.command = /^(broadcast|bc)$/i
 handler.owner = true
 handler.mods = false
 handler.premium = false

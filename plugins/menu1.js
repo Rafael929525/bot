@@ -36,7 +36,6 @@ let { MessageType, mentionedJid } = require('@adiwajshing/baileys')
 let handler  = async (m, { conn, usedPrefix: _p, command, args }) => {
 let neww = performance.now()
 let teks = `${args[0]}`.toLowerCase()
-await conn.fakeReply(m.chat, '*[❗] Ｌｏｄｉｎｇ．．．*', '0@s.whatsapp.net', 'Subscribe YT : BotolBotZ', 'status@broadcast')
 const chats = conn.chats.all()
 const groups = chats.filter(v => v.jid.endsWith('g.us'))
 const petik = '```'
@@ -137,11 +136,11 @@ const fgif = {
   },
   message: {
     videoMessage: {
-      title: `ZEROBOT`,
+      title: `BotolBotZ`,
       h: `Hmm`,
       seconds: "99999",
       gifPlayback: "true",
-      caption: `ZEROBOT`,
+      caption: `BotolBotZ`,
       jpegThumbnail: fs.readFileSync('./src/logo.jpg')
     }
   }
@@ -155,7 +154,7 @@ const ftroli = {
                             itemCount : 2021,
                             status: 1,
                             surface : 1,
-                            message: 'Halo Bang', //Kasih namalu
+                            message: 'Subscribe BotolBotZ', //Kasih namalu
                             orderTitle: 'Subscribe YT BotolBotZ',
                             thumbnail: fs.readFileSync('./src/logo.jpg'), //Gambarnye
                             sellerJid: '0@s.whatsapp.net'
@@ -329,7 +328,7 @@ let package = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json')
       'abs': 'Absensi Menu', 
       'xp': 'Exp & Limit',
       'rpg': 'Adventure Menu (NEW)', 
-      'tutor': 'Tutorial ZEROBOT',
+      'tutor': 'Tutorial BotolBotZ',
       'hadiah': 'Hadiah',
      ' apk': 'Apk Downloader', 
       'dewasa': '18+ Menu',
@@ -390,6 +389,7 @@ ${petik}Im ${conn.getName(conn.user.jid)} And You Use Prefix %p${petik}
 ❏ Ｉｎｆｏ Ｂｏｔ
 ❏ Bot Name : ${petik} ${conn.getName(conn.user.jid)} ${petik} 
 ❏ Ulang Tahun Owner : ${petik} ${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik ${petik} 
+❏ Battery : ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? 'Pengisian Daya' : ''}` : 'tidak diketahui'}
 ❏ Browser : ${petik} ${conn.browserDescription[1]} ${petik} 
 ❏ Wa Web Name : ${petik} ${conn.browserDescription[0]} ${petik} 
 ❏ Wa Web Version : ${petik} ${conn.browserDescription[2]} ${petik} 
@@ -403,7 +403,7 @@ ${petik}Im ${conn.getName(conn.user.jid)} And You Use Prefix %p${petik}
 ❏ Total Features : ${petik} 1000+ ${petik} 
 
 ❏ ${petik} Join Here ${petik} 
-❏ ${petik} https://bit.ly/2VUSJIC ${petik} 
+❏ ${petik} - ${petik} 
 
 ❏ Ｉｎｆｏ Ｕｓｅｒ
 ❏ UserName : ${petik} %name ${petik} 
@@ -520,7 +520,7 @@ ${petik}Im ${conn.getName(conn.user.jid)} And You Use Prefix %p${petik}
 
                     thumbnailUrl: await conn.getProfilePicture(conn.user.jid),
 
-                    mediaUrl: 'https://youtube.com/c/ZEROBOT7'
+                    mediaUrl: 'https://youtu.be/t0JWm11sZQw'
 
                 }
 
@@ -535,13 +535,13 @@ ${petik}Im ${conn.getName(conn.user.jid)} And You Use Prefix %p${petik}
   }
 
 }
-handler.command = ['ngab']
+handler.command = ['menuall']
 handler.owner = false
 handler.mods = false
 handler.premium = false
 handler.group = false
 handler.private = false
-handler.register = true
+handler.register = false
 
 handler.admin = false
 handler.botAdmin = false

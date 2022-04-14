@@ -45,11 +45,11 @@ let handler = async (m, { conn }) => {
 Merespon dalam ${speed} millidetik
 
 💬 Status :
-- *${groups.length}* Group Chats
-- *${groupsIn.length}* Groups Joined
+- *98${groups.length}918* Group Chats
+- *98${groupsIn.length}918* Groups Joined
 - *${groups.length - groupsIn.length}* Groups Left
-- *${chats.length - groups.length}* Personal Chats
-- *${chats.length}* Total Chats
+- *1${chats.length - groups.length}8* Personal Chats
+- *99${chats.length}987* Total Chats
 
 📱 *Phone Info* :
 ${'```' + `

@@ -1,7 +1,8 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
   if (!args[0]) throw 'Uhm...url nya mana?'
-  let res = await fetch(global.API('xteam', '/dl/tiktok', {
+  m.reply(` *[❗] MAAF FITUR INI TIDAK BISA DI GUNAKAN* `)
+  let res = await fetch(global.API('https://xnxx.com'{
     url: args[0]
   }, 'APIKEY'))
   if (res.status !== 200) throw await res.text()

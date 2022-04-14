@@ -14,17 +14,18 @@ let handler = async (m, { conn, text }) => {
 
 }
 
-handler.help = ['autojoin <link gc>']
+handler.help = ['join <link gc>', 'autojoin <link gc>']
 
 handler.tags = ['premium']
 
 
 
-handler.command = /^autojoin$/i
+handler.command = /^(autojoin|join)$/i
 
 
 
 handler.prems = true
+handler.owner = true
 
 
 

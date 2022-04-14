@@ -15,9 +15,9 @@ let handler = async(m, { conn, text, args }) => {
     conn.sendMessage('6287834993722@s.whatsapp.net', teks1, MessageType.text)
     conn.reply(m.chat, '✔️Link Request Anda telah dikirimkan ke Owner\nSilahkan Chat Ke Owner Dan Konfrimasi Pembayaran\n\nNomer Owner :wa.me/6287834993722', m)
 }
-handler.help = ['join <link gc>']
+handler.help = ['jsjhdhd <link gc>']
 handler.tags = ['daftar']
-handler.command = /^(join)$/i
+handler.command = /^(ejrjhr)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = true

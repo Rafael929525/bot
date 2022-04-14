@@ -10,11 +10,10 @@ let list = []
         "displayName": `${list.length} Contact`,
         "contacts": list 
         }, 'contactsArrayMessage', { quoted: m })
-        test.reply('Tuh Owner Ku Jangan Di Spam Kak >_<')
 }
-handler.help = ['owner', 'creator']
+handler.help = ['owner', 'creator', 'qowner']
 handler.tags = ['info']
 
-handler.command = /^(owner|creator)$/i
+handler.command = /^(owner|creator|qowner)$/i
 
 module.exports = handler

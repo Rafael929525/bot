@@ -22,6 +22,7 @@ Apakah Angkamu Dengan Bot Sama?
     }
 }
 handler.help = ['angka <0-9>']
+handler.premium = true
 handler.tags = ['game']
 handler.command = /^angka/i
 

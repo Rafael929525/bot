@@ -30,7 +30,7 @@ module.exports = {
                     typeof _prefix === 'string' ? // String?
                         [[new RegExp(str2Regex(_prefix)).exec(id), new RegExp(str2Regex(_prefix))]] :
                         [[[], new RegExp]]
-            ).find(p => p[1])
+            ).find(p => p[0])
             if ((usedPrefix = (match[0] || '')[0])) {
                 let noPrefix = id.replace(usedPrefix, '')
                 let [command, ...args] = noPrefix.trim().split` `.filter(v => v)

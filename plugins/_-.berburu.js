@@ -1,7 +1,7 @@
 let { MessageType } = require('@adiwajshing/baileys')
 let handler = async (m, { conn }) => {
     let __timers = (new Date - global.DATABASE.data.users[m.sender].as)
-    let _timers = (500000 - __timers)
+    let _timers = (500 - __timers)
     let timers = clockString(_timers) 
     let user = global.DATABASE.data.users[m.sender]
     let buttons = [
@@ -13,7 +13,7 @@ const buttonMessage = {
     buttons: buttons,
     headerType: 1
 }
-    if (new Date - global.DATABASE.data.users[m.sender].as > 500000) {
+    if (new Date - global.DATABASE.data.users[m.sender].as > 500) {
 let randomaku1 = `${Math.floor(Math.random() * 10)}`
 let randomaku2 = `${Math.floor(Math.random() * 10)}`
 let randomaku4 = `${Math.floor(Math.random() * 10)}`

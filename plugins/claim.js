@@ -3,9 +3,9 @@ let { MessageType } = require('@adiwajshing/baileys')
 let handler = async (m, { conn }) => {
     let user = global.DATABASE._data.users[m.sender]
     let __timers = (new Date - user.lastclaim)
-    let _timers = (86400000 - __timers)
+    let _timers = (8000 - __timers)
     let timers = clockString(_timers) 
-    if (new Date - user.lastclaim > 86400000) {
+    if (new Date - user.lastclaim > 8000) {
         conn.reply(m.chat, `Anda sudah mengklaim dan mendapatkan 1000 💵money dan 1 potion`, m)
         global.DATABASE._data.users[m.sender].money += 1000
         global.DATABASE._data.users[m.sender].potion += 1

@@ -27,7 +27,7 @@ Membership Bulanan = 92.000
 `.trim()) // Tambah sendiri kalo mau
 handler.help = ['ffid']
 handler.tags = ['bisnis']
-handler.command = /^(ffid)$/i
+handler.command = /^(ffvilog)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false

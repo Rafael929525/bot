@@ -11,7 +11,7 @@ let str = `
 ${text}
 `.trim()
 
-  let hasil = await getBuffer('http://lolhuman.herokuapp.com/api/gimage?apikey=HIRO&query=' + text)
+  let hasil = await getBuffer('https://api.caliph.my.id/api/pinterest?apikey=VzqXeuvj&q=elaina' + text)
 
      conn.sendFile(m.chat, hasil, 'foto.jpg', str, m)
 }

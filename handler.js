@@ -615,12 +615,12 @@ global.dfail = (type, m, conn) => {
     rowner: '*[❗] Creator Only*', 
     owner: '*[❗] Owner Only*',
     mods: '*[❗] Moderator Only*',
-    premium: '*Fitur Ini Hanya Untuk User Premium*\nDapatkan Premium Trial Dengan Cara Subscribe\nhttps://youtube.com/c/ZEROBOT7',
+    premium: '*Fitur Ini Hanya Untuk User Premium*',
     group: '*[❗] Group Only*',
     private: '*[❗] Private Only*',
     admin: '*[❗] Admin Group Only*',
     botAdmin: '*[❗] Bot Admin Only*',
-    //unreg: '── 「 NOT REGISTERED 」 ──\nSilakan Register Terlebih Dahulu Sebelum Menggunakan Bot. Cara Register Cukup Dengan Command *#registered* Atau *#daftar namamu|umurmu*\n\nNote:\nHarap Save Serial Number Mu Agar Bisa Melakukan Unreg Database Bot', 
+    unreg: '── 「 NOT REGISTERED 」 ──\nSilakan Register Terlebih Dahulu Sebelum Menggunakan Bot. Cara Register Cukup Dengan Command *#registered* Atau *#daftar namamu|umurmu*\n\nNote:\nHarap Save Serial Number Mu Agar Bisa Melakukan Unreg Database Bot', 
 nsfw : 'NFSW Not Active'
   }[type]
   if (msg) return m.reply(msg)
@@ -631,7 +631,7 @@ const ftroli = {key : {participant : '0@s.whatsapp.net'}, message: {orderMessage
 let eek = fs.readFileSync('./src/logo.jpg')
 
 let msg = {
-  unreg: '\n*RakuGans*'
+  unreg: '\n*BotolBotZ*'
 }
   this.sendButton(m.chat, `
 KAMU BELUM TERDAFTAR DI DATABASE 
